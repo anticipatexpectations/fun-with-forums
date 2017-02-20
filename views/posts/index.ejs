@@ -14,7 +14,7 @@
             <% posts.forEach( (posts) => { %>
               <a href="/posts/<%= posts.id %>">
               <div class="post">
-                <p><%= posts.img_url %></p>
+                <img src="<%= posts.img_url %>" alt="a picture">
                 <h2><%= posts.subject %></h2>
                 <p><%= posts.p_content %></p>
                 <p><%= posts.p_likes %></p>

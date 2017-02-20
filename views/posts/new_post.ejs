@@ -5,11 +5,17 @@
     <title>New Post</title>
   </head>
   <body>
-    <form action="/posts" method="POST">
-      <label for="post[subject]">Subject:</label><br>
-      <input type="text" name="post[subject]"><br>
-      <label for="post[p_content]">Content:</label><br>
-      <input type="text" name="post[p_content]"><br>
+    <form action="/posts/new" method="POST">
+      <label for="posts[img_url]">img:</label><br>
+      <input type="text" name="posts[img_url]"><br>
+      <label for="posts[subject]">Subject:</label><br>
+      <input type="text" name="posts[subject]"><br>
+      <label for="posts[p_content]">Content:</label><br>
+      <input type="text" name="posts[p_content]"><br>
+
+      <input type="hidden" name="posts[p_likes]" value="0">
+      <input type="hidden" name="posts[num_comments]" value="0">
+
       <input type="submit" value="Add Post">
     </form>
 

@@ -7,8 +7,9 @@ Posts.findAll=()=>{
 }
 
 Posts.save =(posts) => {
-  return db.none(`INSERT INTO posts (subject, img_url, p_content) VALUES ($1, $2, $3)`,
-  [posts.subject, posts.img_url, posts.p_content])
+  console.log('inside posts model', posts);
+  return db.none(`INSERT INTO posts (subject, img_url, p_content, p_likes, num_comments) VALUES ($1, $2, $3, $4, $5)`,
+  [posts.subject, posts.img_url, posts.p_content, posts.p_likes, posts.num_comments])
 }
 
 Posts.like=(id) => {

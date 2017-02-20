@@ -10,11 +10,13 @@ controller.index=(req, res) =>{
 }
 
 controller.new=(req, res) =>{
+  console.log(req.body, req.query);
   res.render('posts/new_post');
 }
 
 controller.create=(req, res) =>{
-  Posts.save(req.body.gif)
+  console.log('inside controller.create', req.body, req.query)
+  Posts.save(req.body.posts)
   .then(()=> res.redirect('/posts/'))
   .catch(err => console.log('ERROR:', err));
 }
@@ -35,8 +37,8 @@ controller.like=(req, res)=>{
 }
 
 controller.destroy=(req, res) => {
-Gif.destroy(req.params.id)
-.then(() => res.redirect('/gif'))
+Posts.destroy(req.params.id)
+.then(() => res.redirect('/posts'))
 .catch(err => console.log('ERROR:', err));
 }
 
