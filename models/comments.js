@@ -2,7 +2,7 @@ const db = require('../config/database');
 const Comment = {};
 
 
-comments.
+// comments.
 
 
 module.exports= Comment;

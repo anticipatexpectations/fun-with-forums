@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>fun with forums</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>WHOA WHAT A FORUM</h1>
+      </header>
+        <section>
+            <a href="/posts/new">ADD NEW POST</a>
+            <% posts.forEach( (posts) => { %>
+              <a href="/posts/<%= posts.id %>">
+              <div class="post">
+                <p><%= posts.img_url %></p>
+                <h2><%= posts.subject %></h2>
+                <p><%= posts.p_content %></p>
+                <p><%= posts.p_likes %></p>
+                <p><%= posts.num_comments %></p>
+              </div>
+              </a>
+            <% }) %>
+        </section>
+    </main>
+  </body>
+</html>
