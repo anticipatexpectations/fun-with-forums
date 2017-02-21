@@ -14,6 +14,18 @@ controller.new=(req, res) =>{
   res.render('posts/new_post');
 }
 
+controller.edit=(req, res) => {
+  Posts.findById(req.params.id)
+  .then(data => res.render('posts/edit', {posts: data}))
+  .catch(err => console.log('ERROR:', err));
+}
+
+controller.update = (req, res) => {
+  Posts.update(req.body.posts, req.params.id)
+  .then(() => res.redirect('/posts'))
+  .catch(err => console.log('ERROR:', err));
+}
+
 controller.create=(req, res) =>{
   console.log('inside controller.create', req.body, req.query)
   Posts.save(req.body.posts)

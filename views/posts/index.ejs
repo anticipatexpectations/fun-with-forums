@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>fun with forums</title>
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <main>
@@ -12,15 +13,15 @@
         <section>
             <a href="/posts/new">ADD NEW POST</a>
             <% posts.forEach( (posts) => { %>
-              <a href="/posts/<%= posts.id %>">
               <div class="post">
-                <img src="<%= posts.img_url %>" alt="a picture">
-                <h2><%= posts.subject %></h2>
+                <a href="/posts/<%= posts.id %>">
+                  <img src="<%= posts.img_url %>" alt="a picture">
+                  <h2><%= posts.subject %></h2>
+                </a>
                 <p><%= posts.p_content %></p>
-                <p><%= posts.p_likes %></p>
-                <p><%= posts.num_comments %></p>
+                <p>likes: <%= posts.p_likes %></p>
+                <p>comments: <%= posts.num_comments %></p>
               </div>
-              </a>
             <% }) %>
         </section>
     </main>

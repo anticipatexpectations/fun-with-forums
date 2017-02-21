@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>EDIT YOUR POST</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>EDIT YOUR POST</h1>
+      </header>
+        <section>
+          <form class="" action="/posts/<%= posts.id %>?_method=PUT" method="POST">
+
+            <label for="posts[img_url]">IMG URL:</label><br>
+            <input type="text" name="posts[img_url]" value="<%= posts.img_url %>"><br>
+            <label for="posts[name]">SUBJECT:</label>
+            <input type="text" name="posts[subject]" value="<%= posts.subject %>"><br>
+            <label for="posts[name]">CONTENT:</label>
+            <input type="text" name="posts[p_content]" value="<%= posts.p_content %>"><br>
+
+            <input type="submit" name="" value="EDIT POST">
+          </form>
+
+          <form class="" action="/posts/<%= posts.id %>?_method=DELETE" method="POST">
+            <input type="submit" name="" value="DELETE">
+          </form>
+        </section>
+    </main>
+  </body>
+</html>

@@ -3,9 +3,11 @@ const router = express.Router();
 const controller = require('./controller')
 
 
-router.put('/like/:id', controller.like);
+router.get('/:id/edit/', controller.edit);
+router.put('/:id/like/', controller.like);
 router.get("/new", controller.new);
 router.get("/:id", controller.show);
+router.put('/:id', controller.update);
 router.delete('/:id', controller.destroy);
 router.get('/', controller.index);
 router.post('/new', controller.create);
