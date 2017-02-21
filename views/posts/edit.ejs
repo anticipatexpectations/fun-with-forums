@@ -7,6 +7,7 @@
   </head>
   <body>
     <main>
+      <a href="/posts">Home</a><br>
       <header>
         <h1>EDIT YOUR POST</h1>
       </header>
@@ -26,6 +27,8 @@
           <form class="" action="/posts/<%= posts.id %>?_method=DELETE" method="POST">
             <input type="submit" name="" value="DELETE">
           </form>
+
+          <a href="/posts/<%= posts.id %>"> go back </a><br>
         </section>
     </main>
   </body>

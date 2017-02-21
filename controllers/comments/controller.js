@@ -5,7 +5,7 @@ const controller = {};
 
 controller.index=(req, res) =>{
   Comments.findAll()
-    .then(data => res.render('posts/index', {posts: data}))
+    .then(data => res.render('posts/index', {comments: data}))
     .catch(err => console.log('ERROR', err));
 }
 
@@ -21,11 +21,11 @@ controller.create=(req, res) =>{
   .catch(err => console.log('ERROR:', err));
 }
 
-controller.show=(req, res) =>{
+// controller.show=(req, res) =>{
 //   Comments.findById(req.params.id)
-//   .then(data => res.render('posts/show', {posts: data}))
+//   .then(data => res.render('posts/show', {comments: data}))
 //   .catch(err => console.log('ERROR:', err));
-}
+// }
 
 controller.like=(req, res)=>{
   Comments.like(req.params.id)

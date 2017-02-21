@@ -1,4 +1,5 @@
 const Posts = require('../../models/posts');
+const Comments = require('../../models/comments');
 
 const controller = {};
 

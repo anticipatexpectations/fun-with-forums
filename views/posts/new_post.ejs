@@ -6,22 +6,18 @@
   </head>
   <body>
     <form action="/posts/new" method="POST">
-      <label for="posts[img_url]">img:</label><br>
+      <label for="posts[img_url]">img url:</label><br>
       <input type="text" name="posts[img_url]"><br>
       <label for="posts[subject]">Subject:</label><br>
       <input type="text" name="posts[subject]"><br>
 
-      <textarea name="name" rows="8" cols="80"></textarea>
-
-
-
       <label for="posts[p_content]">Content:</label><br>
-      <input type="text" name="posts[p_content]"><br>
+      <textarea name="posts[p_content]" rows="8" cols="80"></textarea><br>
 
       <input type="hidden" name="posts[p_likes]" value="0">
-      <input type="hidden" name="posts[num_comments]" value="0">
+      <input type="hidden" name="posts[num_comments]" value="0"><br>
 
-      <input type="submit" value="Add Post">
+      <input type="submit" value="Add Post"><br>
     </form>
 
   </body>

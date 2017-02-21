@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+        <textarea form="add-comment" name="comments[c_content]" rows="8" cols="50"></textarea>
+        <form id="add-comment" action="/posts/<%= posts.id %>/" method="POST">
+          <input type="submit" value="Add Comment">
+        </form>
+
+  </body>
+</html>
