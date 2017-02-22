@@ -84,7 +84,7 @@ controller.clike=(req, res)=>{
   Comments.clike(req.params.post_id, req.params.id)
   .then((data) => {
     console.log(req.query.show, 'here is a string');
-    res.redirect(`/posts/${req.params.id}`)
+    res.redirect(`/posts/${req.params.post_id}`)
 })
   .catch(err => console.log('ERROR:', err));
 }

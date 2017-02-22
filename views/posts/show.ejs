@@ -38,7 +38,7 @@
     <div class="comments">
     <p><%= comments.c_content %></p>
     <p>Likes: <%= comments.c_likes %></p>
-    <form action="/posts/<%= comments.post_id %>/<%= comments.id %>/clike?_method=PUT&show=true" method = "POST">
+    <form action="/posts/<%= comments.post_id %>/<%= comments.id %>/clike?_method=PUT&show=true" method="POST">
       <input type="submit"value="Like">
     </form>
     </div>

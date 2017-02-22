@@ -19,7 +19,7 @@ Comments.createComment =(comments) => {
 
 Comments.findAllByPostId = (id) => {
   console.log(id);
-  return db.manyOrNone(`SELECT * FROM comments WHERE post_id = $1`,[id])
+  return db.manyOrNone(`SELECT * FROM comments WHERE post_id = $1 ORDER BY c_likes DESC`,[id])
 }
 
 Comments.numComments = (id) => {
