@@ -19,8 +19,8 @@ This is a basic forum clone. Users can make text posts with pictures, text comme
 -jquery
 
 #unsolved problems
--comment edit and delete. non required extra feature but unattempted due to deadline
+-post edit and delete works but individual comment edit and delete do not. non required extra feature but unattempted due to deadlined
 
 -drop down menu to choose how to sort posts or comments based on chronology, number of comments, or likes. non required extra feature but unattempted due to deadline
 
--ran out of time to do a decent job on css
+-ran out of time to do a decent job on css, focused on feature requirements and some extras like edit and delete
