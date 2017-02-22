@@ -1,5 +1,5 @@
 #Fun with forums
-this is a basic forum clone. Users can make text posts with pictures, text comments, and vote on either with likes.
+This is a basic forum clone. Users can make text posts with pictures, text comments, and vote on either with likes. They can also edit the original post or delete it along with that posts comments 
 
 #libraries and dependencies used
 -"body-parser": "^1.16.1",
