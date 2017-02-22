@@ -19,8 +19,6 @@ This is a basic forum clone. Users can make text posts with pictures, text comme
 -jquery
 
 #unsolved problems
--attempt at extra features like a random name generator in jquery which gives a random name any time the page is loaded. attempted but unable to solve
-
 -comment edit and delete. non required extra feature but unattempted due to deadline
 
 -drop down menu to choose how to sort posts or comments based on chronology, number of comments, or likes. non required extra feature but unattempted due to deadline

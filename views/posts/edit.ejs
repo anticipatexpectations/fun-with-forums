@@ -4,12 +4,18 @@
     <meta charset="utf-8">
     <title>EDIT YOUR POST</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="/libraries/jquery/jquery.min.js"></script>
+      <!-- Materialize JS -->
+    <script src="/libraries/materialize/js/materialize.min.js"></script>
+        <!-- Application JS -->
+    <script src="/js/app.js"></script>
   </head>
   <body>
     <main>
       <a href="/posts">Home</a><br>
       <header>
-        <h1>EDIT YOUR POST</h1>
+        <h1 id="forumName">Whoa What A Forum</h1>
+        <h1>Edit Your Post</h1>
       </header>
         <section>
           <form class="" action="/posts/<%= posts.id %>?_method=PUT" method="POST">

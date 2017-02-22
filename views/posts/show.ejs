@@ -4,9 +4,15 @@
     <meta charset="utf-8">
     <title><%= posts.subject %></title>
       <link rel="stylesheet" href="/css/style.css" />
+      <script src="/libraries/jquery/jquery.min.js"></script>
+        <!-- Materialize JS -->
+      <script src="/libraries/materialize/js/materialize.min.js"></script>
+          <!-- Application JS -->
+      <script src="/js/app.js"></script>
 
   </head>
   <body>
+    <h1 id="forumName">Whoa What A Forum</h1>
     <a href="/posts">Home</a><br>
 <%= console.log(comments)%>
   <div class="post">

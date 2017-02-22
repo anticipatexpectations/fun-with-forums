@@ -4,8 +4,15 @@
     <meta charset="utf-8">
     <title>New Post</title>
       <link rel="stylesheet" href="/css/style.css" />
+      <script src="/libraries/jquery/jquery.min.js"></script>
+        <!-- Materialize JS -->
+      <script src="/libraries/materialize/js/materialize.min.js"></script>
+          <!-- Application JS -->
+      <script src="/js/app.js"></script>
   </head>
   <body>
+    <h1 id="forumName">Whoa What A Forum</h1>
+
     <form action="/posts/new" method="POST">
       <label for="posts[img_url]">img url:</label><br>
       <input type="text" name="posts[img_url]"><br>
@@ -19,6 +26,7 @@
       <input type="hidden" name="posts[num_comments]" value="0"><br>
 
       <input type="submit" value="Add Post"><br>
+      <a href="/posts">Go Back</a><br>
     </form>
 
   </body>
