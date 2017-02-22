@@ -3,12 +3,19 @@ this is a basic forum clone. Users can make text posts with pictures, text comme
 
 #libraries and dependencies used
 -"body-parser": "^1.16.1",
+
 -"ejs": "^2.5.6",
+
 -"express": "^4.14.1",
+
 -"method-override": "^2.3.7",
+
 -"morgan": "^1.8.1",
+
 -"path": "^0.12.7",
+
 -"pg-promise": "^5.5.6"
+
 -jquery
 
 #unsolved problems
