@@ -8,8 +8,6 @@ CREATE TABLE "posts" (
 	"p_content" varchar(255) NOT NULL,
 	"p_likes" integer NOT NULL,
 	"num_comments" integer NOT NULL
-) WITH (
-  OIDS=FALSE
 );
 
 
@@ -17,7 +15,5 @@ CREATE TABLE "comments" (
 	"id" serial NOT NULL,
 	"c_content" varchar(255) NOT NULL,
 	"c_likes" integer NOT NULL,
-	"post_id" bigserial NOT NULL
-) WITH (
-  OIDS=FALSE
+	"post_id" integer NOT NULL
 );

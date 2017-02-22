@@ -11,10 +11,10 @@ Comments.findAll=()=>{
 //   return db.one(`SELECT * FROM comments WHERE id = $1`,[id]);
 // }
 //
-Comments.createComment =(comments, post_id) => {
+Comments.createComment =(comments) => {
   console.log('inside comments model', comments);
-  return db.none(`INSERT INTO comments ( c_content, post_id) VALUES ($1, $2)`,
-  [comments.c_content, post_id ])
+  return db.none(`INSERT INTO comments ( c_content, c_likes, post_id) VALUES ($1, $2, $3)`,
+  [comments.c_content, parseInt(comments.c_likes), parseInt(comments.post_id)])
 }
 
 Comments.findAllByPostId = (id) => {
@@ -36,9 +36,9 @@ Comments.numComments = (id) => {
 //
 
 
-Comments.c_like=(id) => {
+Comments.clike=(post_id, id) => {
   console.log('oyogflyglh', id);
-  return db.query(`UPDATE comments SET c_likes = c_likes + 1 WHERE id = $1`, [id]);
+  return db.query(`UPDATE comments SET c_likes = c_likes + 1 WHERE post_id = $1 AND id = $2`, [post_id, id]);
 }
 
 Comments.destroy = (id) => {

@@ -4,23 +4,28 @@
     <meta charset="utf-8">
     <title>fun with forums</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="/libraries/jquery/jquery.min.js"></script>
+      <!-- Materialize JS -->
+    <script src="/libraries/materialize/js/materialize.min.js"></script>
+        <!-- Application JS -->
+    <script src="/js/app.js"></script>
   </head>
   <body>
     <main>
       <header>
-        <h1>WHOA WHAT A FORUM</h1>
+        <h1 id="forumName">Whoa What A Forum</h1>
       </header>
         <section>
-            <a href="/posts/new">ADD NEW POST</a>
+            <a id="newPostLink" href="/posts/new">ADD NEW POST</a>
             <% posts.forEach( (posts) => { %>
               <div class="post">
                 <a href="/posts/<%= posts.id %>">
                   <img src="<%= posts.img_url %>" alt="a picture">
-                  <h2><%= posts.subject %></h2>
+                  <h2>Subject: <%= posts.subject %></h2>
                 </a>
-                <p><%= posts.p_content %></p>
-                <p>likes: <%= posts.p_likes %></p>
-                <p>comments: <%= posts.num_comments %></p>
+                <p>Content: <%= posts.p_content %></p>
+                <p>Likes: <%= posts.p_likes %>,  Comments: <%= posts.num_comments %></p>
+                <p></p>
               </div>
             <% }) %>
         </section>

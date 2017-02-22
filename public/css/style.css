@@ -1,5 +1,32 @@
 img {
   height: 300px;
   width:300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
 
+
+body {
+  background-color: #f4e842;
+}
+
+#forumName{
+  font-family: helvetica;
+}
+
+.post{
+  background-color: #0B3D91;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comments{
+  background-color: #0B3D91;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
 }

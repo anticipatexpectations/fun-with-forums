@@ -80,13 +80,12 @@ controller.like=(req, res)=>{
   .catch(err => console.log('ERROR:', err));
 }
 
-controller.c_like=(req, res)=>{
-  Comments.c_like(req.params.id)
-  .then(() => {
-    console.log(req.params.id, 'here is a string');
-    if (req.query.show){
+controller.clike=(req, res)=>{
+  Comments.clike(req.params.post_id, req.params.id)
+  .then((data) => {
+    console.log(req.query.show, 'here is a string');
     res.redirect(`/posts/${req.params.id}`)
-  } else { res.redirect('/posts')}})
+})
   .catch(err => console.log('ERROR:', err));
 }
 
