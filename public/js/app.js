@@ -9,7 +9,7 @@ const nameArr = [
 'Vietnamese Thumb Wrestling Tactic Forum',
 'Ainu Moss Farming Forum',
 'Pashtun Didgeridoo Fighting Club Forum',
-'Swiss Vindaloo Appreciation Forum'
+'Swiss Exorcists For Hire Forum'
 ];
 $( document ).ready(function() {
   $("#forumName").html(nameArr[Math.floor( Math.random() * nameArr.length)])
