@@ -8,11 +8,11 @@
   </head>
   <body>
     <a href="/posts">Home</a><br>
-
+<%= console.log(comments)%>
     <img src="<%= posts.img_url %>" alt="a picture">
     <h1><%= posts.subject %></h1>
     <p><%= posts.p_content %></p>
-    <p>LIKES: <%= posts.p_likes %></p>
+    <p>Likes: <%= posts.p_likes %></p>
     <p>Comments: <%= posts.num_comments %></p>
       <form action="/posts/<%= posts.id %>/like?_method=PUT&show=true" method = "POST">
         <input type="submit"value="Like">
@@ -22,9 +22,23 @@
       </form>
 
 
-    <textarea form="add-comment" name="comments[c_content]" rows="8" cols="50"></textarea>
+
+
     <form id="add-comment" action="/posts/<%= posts.id %>/" method="POST">
+      <textarea form="add-comment" name="comments[c_content]" rows="8" cols="50"></textarea><br>
       <input type="submit" value="Add Comment">
+
     </form>
+    <% comments.forEach( (comments) => { %>
+    <p><%= comments.c_content %></p>
+    <p>Likes: <%= comments.c_likes %></p>
+    <form action="/posts/<%= posts.id %>/c_like?_method=PUT&show=true" method = "POST">
+      <input type="submit"value="Like">
+    </form>
+
+
+    <% }) %>
+
+
   </body>
 </html>

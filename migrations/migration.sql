@@ -1,4 +1,5 @@
-DROP TABLE if EXISTS posts OR comments;
+DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS comments;
 
 CREATE TABLE "posts" (
 	"id" serial NOT NULL,
@@ -6,8 +7,7 @@ CREATE TABLE "posts" (
 	"img_url" varchar(255) NOT NULL,
 	"p_content" varchar(255) NOT NULL,
 	"p_likes" integer NOT NULL,
-	"num_comments" integer NOT NULL,
-	CONSTRAINT posts_pk PRIMARY KEY ("id")
+	"num_comments" integer NOT NULL
 ) WITH (
   OIDS=FALSE
 );
@@ -17,10 +17,7 @@ CREATE TABLE "comments" (
 	"id" serial NOT NULL,
 	"c_content" varchar(255) NOT NULL,
 	"c_likes" integer NOT NULL,
-	"post_id" bigserial NOT NULL,
-	CONSTRAINT comments_pk PRIMARY KEY ("id")
+	"post_id" bigserial NOT NULL
 ) WITH (
   OIDS=FALSE
 );
-
-ALTER TABLE "comments" ADD CONSTRAINT "comments_fk0" FOREIGN KEY ("post_id") REFERENCES "posts"("id");

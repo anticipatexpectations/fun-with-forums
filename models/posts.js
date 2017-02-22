@@ -30,5 +30,8 @@ Posts.destroy = (id) => {
   return db.none(`DELETE FROM posts WHERE id = $1`, [id]);
 }
 
+Posts.commentsPlusOne = (id) => {
+  return db.none(`UPDATE posts SET num_comments = num_comments + 1 WHERE id = $1`, [id]);
+}
 
 module.exports = Posts;
